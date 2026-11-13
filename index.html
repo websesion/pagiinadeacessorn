@@ -1,0 +1,1033 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eletronunes | Materiais Elétricos</title>
+
+<meta name="description" content="Modelo institucional demonstrativo da Eletronunes Atacadista de Materiais Eletricos Limitada, comércio varejista de material elétrico em Brasília, Distrito Federal.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #103c78;
+  --blue-dark: #092449;
+  --yellow: #f2b52b;
+  --light: #f4f7fa;
+  --dark: #172334;
+  --gray: #687585;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--blue);
+}
+
+img {
+  max-width: 100%;
+}
+
+.demo-notice {
+  padding: 9px 15px;
+  background: #edf2f7;
+  color: #526273;
+  text-align: center;
+  font-size: 11px;
+}
+
+.topbar {
+  background: var(--blue-dark);
+  color: #fff;
+  text-align: center;
+  padding: 11px;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.header {
+  background: #fff;
+  border-bottom: 1px solid #e7eaf0;
+}
+
+.logo {
+  display: inline-block;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--blue);
+  line-height: 1;
+}
+
+.logo span {
+  color: var(--yellow);
+}
+
+.logo small {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  color: var(--gray);
+  margin-top: 8px;
+}
+
+.search {
+  width: 100%;
+  border: 1px solid #dce3ec;
+  padding: 13px 18px;
+  outline: none;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.search:focus {
+  border-color: var(--blue);
+}
+
+.header-icons a {
+  font-size: 22px;
+  margin-left: 18px;
+  color: var(--blue);
+}
+
+.navbar {
+  border-top: 1px solid #edf0f4;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin: 0 12px;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.hero {
+  min-height: 610px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,26,55,.94),
+      rgba(7,40,78,.68),
+      rgba(7,40,78,.15)
+    ),
+    url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1900&q=85')
+    center / cover;
+}
+
+.hero small {
+  color: var(--yellow);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(52px, 7vw, 92px);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  max-width: 780px;
+  margin: 20px 0;
+}
+
+.hero p {
+  max-width: 580px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #e6edf5;
+}
+
+.btn-primary-custom {
+  display: inline-block;
+  background: var(--yellow);
+  border: 1px solid var(--yellow);
+  color: #15243a;
+  padding: 15px 30px;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .7px;
+  transition: .3s;
+}
+
+.btn-primary-custom:hover {
+  background: #fff;
+  color: var(--blue);
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-title small {
+  color: var(--blue);
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.section-title h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(40px, 5vw, 55px);
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 12px;
+}
+
+.section-title p {
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.category {
+  display: block;
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background: var(--blue-dark);
+}
+
+.category img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .5s;
+}
+
+.category:hover img {
+  transform: scale(1.06);
+}
+
+.category::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 25%,
+    rgba(0,18,43,.85)
+  );
+}
+
+.category-label {
+  position: absolute;
+  bottom: 24px;
+  left: 25px;
+  right: 20px;
+  z-index: 1;
+  color: #fff;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.product {
+  text-align: center;
+  height: 100%;
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+  background: #eef2f7;
+}
+
+.product-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: .4s;
+}
+
+.product:hover img {
+  transform: scale(1.04);
+}
+
+.product-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--blue);
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.product h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 18px 0 9px;
+}
+
+.product p {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.8;
+}
+
+.editorial {
+  background: var(--blue-dark);
+  color: #fff;
+}
+
+.editorial img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+}
+
+.editorial-text {
+  padding: 60px 9%;
+}
+
+.editorial-text small {
+  color: var(--yellow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.editorial-text h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 20px 0;
+}
+
+.editorial-text p {
+  color: #d0dceb;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.benefit {
+  text-align: center;
+  padding: 25px;
+}
+
+.benefit i {
+  color: var(--blue);
+  font-size: 36px;
+}
+
+.benefit h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+}
+
+.benefit p {
+  color: var(--gray);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.about {
+  background: var(--light);
+}
+
+.about p {
+  color: #586574;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.info-box {
+  background: #fff;
+  padding: 30px;
+  border-left: 4px solid var(--yellow);
+  height: 100%;
+  box-shadow: 0 5px 25px rgba(0,0,0,.04);
+}
+
+.info-box h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+.info-box p {
+  margin-bottom: 0;
+}
+
+.footer {
+  background: #091b34;
+  color: #fff;
+  padding: 70px 0 25px;
+}
+
+.footer h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer p,
+.footer a,
+.footer li {
+  color: #c5cfda;
+  font-size: 12px;
+  line-height: 2;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer a:hover {
+  color: var(--yellow);
+}
+
+.copyright {
+  border-top: 1px solid #34445a;
+  margin-top: 45px;
+  padding-top: 25px;
+  color: #a8b4c2;
+  font-size: 11px;
+}
+
+@media(max-width:768px) {
+  .hero {
+    min-height: 480px;
+  }
+
+  .section {
+    padding: 55px 0;
+  }
+
+  .category {
+    height: 260px;
+  }
+
+  .product-image img {
+    height: 220px;
+  }
+
+  .editorial img {
+    height: 350px;
+  }
+
+  .editorial-text {
+    padding: 40px 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- AVISO -->
+<div class="demo-notice">
+  Modelo institucional demonstrativo independente.
+  Não representa um canal oficial de vendas da Eletronunes.
+</div>
+
+<!-- BARRA SUPERIOR -->
+<div class="topbar">
+  MATERIAIS ELÉTRICOS • INSTALAÇÕES • INFRAESTRUTURA
+</div>
+
+<!-- CABEÇALHO -->
+<header class="header sticky-top">
+  <div class="container">
+    <div class="row align-items-center py-3 g-3">
+
+      <div class="col-7 col-md-3">
+        <a href="#inicio" class="logo">
+          ELETRONUNES<span>.</span>
+          <small>MODELO INSTITUCIONAL</small>
+        </a>
+      </div>
+
+      <div class="col-md-6 d-none d-md-block">
+        <form id="searchForm">
+          <input
+            type="search"
+            id="searchInput"
+            class="search"
+            placeholder="Busque materiais elétricos..."
+            aria-label="Buscar categorias">
+        </form>
+      </div>
+
+      <div class="col-5 col-md-3 text-end header-icons">
+        <a href="#sobre" aria-label="Sobre a empresa">
+          <i class="bi bi-building"></i>
+        </a>
+
+        <a href="#categorias" aria-label="Categorias">
+          <i class="bi bi-grid"></i>
+        </a>
+
+        <a href="#contato" aria-label="Informações institucionais">
+          <i class="bi bi-geo-alt"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+
+      <button
+        class="navbar-toggler mx-auto"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+        aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#categorias">Categorias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destaques">Destaques</a></li>
+          <li class="nav-item"><a class="nav-link" href="#editorial">Setor elétrico</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sobre">A empresa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+<!-- BANNER PRINCIPAL -->
+<section class="hero" id="inicio">
+  <div class="container">
+
+    <small>Comércio varejista de material elétrico</small>
+
+    <h1>
+      Energia para<br>
+      cada projeto.
+    </h1>
+
+    <p>
+      Conheça categorias de materiais elétricos,
+      componentes para instalações e soluções
+      utilizadas em projetos residenciais,
+      comerciais e industriais.
+    </p>
+
+    <a href="#categorias" class="btn-primary-custom mt-4">
+      Explorar categorias
+    </a>
+
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="section" id="categorias">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Universo elétrico</small>
+      <h2>Principais categorias</h2>
+      <p>Categorias ilustrativas relacionadas ao setor.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <a href="#destaques" class="category">
+          <img
+            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=900&q=85"
+            alt="Materiais para instalações elétricas">
+          <span class="category-label">Materiais elétricos</span>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#destaques" class="category">
+          <img
+            src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=85"
+            alt="Componentes e equipamentos">
+          <span class="category-label">Componentes elétricos</span>
+        </a>
+      </div>
+
+      <div class="col-md-4">
+        <a href="#destaques" class="category">
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=85"
+            alt="Infraestrutura elétrica">
+          <span class="category-label">Infraestrutura</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DESTAQUES -->
+<section class="section pt-0" id="destaques">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Vitrine de referência</small>
+      <h2>Soluções do setor elétrico</h2>
+      <p>
+        Exemplos ilustrativos, sem indicação
+        de catálogo, estoque ou preços da empresa.
+      </p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-6 col-lg-3">
+        <article class="product">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=700&q=85"
+              alt="Instalação elétrica">
+            <span class="product-tag">Setor elétrico</span>
+          </div>
+          <h3>Instalações elétricas</h3>
+          <p>Componentes para diferentes projetos</p>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <article class="product">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=85"
+              alt="Equipamentos técnicos">
+            <span class="product-tag">Equipamentos</span>
+          </div>
+          <h3>Equipamentos técnicos</h3>
+          <p>Aplicações em instalações elétricas</p>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <article class="product">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=700&q=85"
+              alt="Infraestrutura de instalações">
+            <span class="product-tag">Infraestrutura</span>
+          </div>
+          <h3>Infraestrutura elétrica</h3>
+          <p>Ambientes residenciais e comerciais</p>
+        </article>
+      </div>
+
+      <div class="col-6 col-lg-3">
+        <article class="product">
+          <div class="product-image">
+            <img
+              src="https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?auto=format&fit=crop&w=700&q=85"
+              alt="Tecnologia e controle">
+            <span class="product-tag">Tecnologia</span>
+          </div>
+          <h3>Tecnologia e controle</h3>
+          <p>Referências de sistemas elétricos</p>
+        </article>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#sobre" class="btn-primary-custom">
+        Conhecer a empresa
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDITORIAL -->
+<section class="editorial" id="editorial">
+  <div class="container-fluid p-0">
+    <div class="row g-0 align-items-center">
+
+      <div class="col-lg-6">
+        <img
+          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1200&q=85"
+          alt="Ambiente técnico e industrial">
+      </div>
+
+      <div class="col-lg-6">
+        <div class="editorial-text">
+
+          <small>Instalações e infraestrutura</small>
+
+          <h2>
+            Conectando<br>
+            possibilidades.
+          </h2>
+
+          <p>
+            Materiais elétricos fazem parte de projetos
+            de construção, reforma, manutenção
+            e infraestrutura.
+          </p>
+
+          <p>
+            Componentes e equipamentos adequados
+            contribuem para instalações planejadas
+            e aplicações técnicas em diferentes ambientes.
+          </p>
+
+          <a href="#sobre" class="btn-primary-custom mt-3">
+            Informações institucionais
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEGMENTOS -->
+<section class="section">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="benefit">
+          <i class="bi bi-lightning-charge"></i>
+          <h3>Materiais elétricos</h3>
+          <p>
+            Referências de materiais utilizados
+            em instalações elétricas.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="benefit">
+          <i class="bi bi-tools"></i>
+          <h3>Projetos e manutenção</h3>
+          <p>
+            Componentes relacionados à instalação
+            e manutenção de sistemas elétricos.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="benefit">
+          <i class="bi bi-building-gear"></i>
+          <h3>Infraestrutura</h3>
+          <p>
+            Soluções técnicas presentes em
+            ambientes residenciais e comerciais.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INSTITUCIONAL -->
+<section class="section about" id="sobre">
+  <div class="container">
+
+    <div class="section-title">
+      <small>Dados cadastrais fornecidos</small>
+      <h2>Eletronunes Atacadista de Materiais Elétricos Limitada</h2>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+
+        <p>
+          A <strong>Eletronunes Atacadista de Materiais
+          Eletricos Limitada</strong>, conhecida como
+          <strong>Eletronunes</strong>, está inscrita
+          no CNPJ sob o número
+          <strong>07.334.648/0001-43</strong>.
+          Seu estabelecimento está localizado em
+          Brasília, no Distrito Federal,
+          na região de Planaltina.
+        </p>
+
+        <p>
+          Conforme as informações fornecidas,
+          a empresa foi fundada em
+          <strong>23 de março de 2005</strong>
+          e possui como atividade principal
+          o <strong>comércio varejista de
+          material elétrico</strong>,
+          classificado no CNAE
+          <strong>47.42-3-00</strong>.
+        </p>
+
+        <p>
+          Sua situação cadastral foi informada
+          como <strong>ativa</strong>.
+          Esta página apresenta essas informações
+          em um modelo institucional independente.
+        </p>
+
+      </div>
+    </div>
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-md-6">
+        <div class="info-box">
+          <h3>Identificação empresarial</h3>
+
+          <p>
+            <strong>Razão social:</strong><br>
+            Eletronunes Atacadista de Materiais
+            Eletricos Limitada
+          </p>
+
+          <p>
+            <strong>Nome comercial:</strong><br>
+            Eletronunes
+          </p>
+
+          <p>
+            <strong>CNPJ:</strong><br>
+            07.334.648/0001-43
+          </p>
+
+          <p>
+            <strong>Data de abertura:</strong><br>
+            23/03/2005
+          </p>
+
+          <p>
+            <strong>Situação cadastral informada:</strong><br>
+            Ativa
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="info-box">
+          <h3>Atividade e localização</h3>
+
+          <p>
+            <strong>Atividade principal:</strong><br>
+            Comércio varejista de material elétrico
+          </p>
+
+          <p>
+            <strong>CNAE:</strong><br>
+            47.42-3-00
+          </p>
+
+          <p>
+            <strong>Localização:</strong><br>
+            Setor Tradicional (Planaltina),
+            Brasília — DF
+          </p>
+
+          <p>
+            <strong>CEP:</strong><br>
+            73330-073
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- RODAPÉ -->
+<footer class="footer" id="contato">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+        <h4>Eletronunes</h4>
+
+        <p>
+          Página institucional demonstrativa
+          relacionada ao comércio varejista
+          de materiais elétricos.
+        </p>
+
+        <p>
+          Conteúdo informativo baseado nos dados
+          empresariais fornecidos, sem representação
+          de canal oficial de vendas ou atendimento.
+        </p>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h4>Navegação</h4>
+
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#categorias">Categorias</a></li>
+          <li><a href="#destaques">Destaques</a></li>
+          <li><a href="#editorial">Setor elétrico</a></li>
+          <li><a href="#sobre">A empresa</a></li>
+          <li><a href="#contato">Dados cadastrais</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h4>Dados empresariais</h4>
+
+        <p>
+          <strong>
+            ELETRONUNES ATACADISTA DE MATERIAIS
+            ELETRICOS LIMITADA
+          </strong><br>
+
+          CNPJ: 07.334.648/0001-43<br>
+
+          Rua Eugênio Jardim
+          (Quadras 26, 32, 33, 34, 35 e 36)<br>
+
+          Lote 24, Loja 01<br>
+          Lote 25, Lojas 03 e 04<br>
+
+          Setor Tradicional (Planaltina)<br>
+          Brasília — DF<br>
+          CEP: 73330-073
+        </p>
+
+        <p>
+          <strong>Atividade principal:</strong><br>
+          Comércio varejista de material elétrico
+        </p>
+
+        <p>
+          <strong>CNAE:</strong> 47.42-3-00
+        </p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      <p>
+        © 2026 — Modelo institucional demonstrativo independente.
+      </p>
+
+      <p>
+        Empresa de referência:
+        ELETRONUNES ATACADISTA DE MATERIAIS
+        ELETRICOS LIMITADA —
+        CNPJ 07.334.648/0001-43.
+      </p>
+
+      <p class="mb-0">
+        Este modelo não é um site oficial da empresa.
+        Marcas e identidades corporativas pertencem
+        aos respectivos titulares.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.getElementById("searchForm")
+  .addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const termo = document.getElementById("searchInput")
+      .value.trim().toLowerCase();
+
+    if (!termo) return;
+
+    const palavras = [
+      "material",
+      "materiais",
+      "eletrico",
+      "elétrico",
+      "eletrica",
+      "elétrica",
+      "instalacao",
+      "instalação",
+      "infraestrutura",
+      "energia",
+      "equipamentos",
+      "componentes"
+    ];
+
+    const encontrou = palavras.some(
+      palavra => palavra.includes(termo) ||
+                 termo.includes(palavra)
+    );
+
+    if (encontrou) {
+      document.getElementById("categorias")
+        .scrollIntoView({ behavior: "smooth" });
+    } else {
+      alert(
+        "Esta é uma página demonstrativa. " +
+        "Não existe um catálogo comercial integrado."
+      );
+    }
+
+  });
+</script>
+
+</body>
+</html>
